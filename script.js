@@ -1,7 +1,8 @@
 //let declares these variables 
 var searchButton = $(".searchButton");
 
-var apiKey = "b8ecb570e32c2e5042581abd004b71bb";
+var apiKey = "594c41602ce2f5ac3b3cdffd7564944d";
+
 
 // we loop into the storage to check if there is any saved data 
 for (var i = 0; i < localStorage.length; i++) {
@@ -63,7 +64,7 @@ searchButton.click(function () {
             weatherData.append("<p>" + "Wind Speed: " + response.wind.speed + "</p>");
 
             // let declare the variable url for the uvi data
-            var urlUvi = `https://api.openweathermap.org/data/2.5/uvi?appid=b8ecb570e32c2e5042581abd004b71bb&lat=${response.coord.lat}&lon=${response.coord.lon}`;
+            var urlUvi = `https://api.openweathermap.org/data/2.5/uvi?appid=594c41602ce2f5ac3b3cdffd7564944d&lat=${response.coord.lat}&lon=${response.coord.lon}`;
 
             // this will query the API and return the uvi data
             $.ajax({
