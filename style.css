@@ -1,0 +1,40 @@
+ul {
+  list-style: none;
+}
+/* style for th elist items */
+li {
+  border-bottom: 1px solid lightgray;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* This styles for five day forecast cards */
+.fivedayStyle {
+  padding: 20px;
+  background-color: #1c3544;
+  color: white;
+  float: left;
+  margin: 10px;
+  border: 1px solid lightgray;
+}
+
+.bg-primary {
+  background-color: #1c3544 !important;
+}
+
+header .card-body {
+  background-color: #1c3544;
+}
+
+li {
+  background-color: #828586;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 3px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.UV {
+  background-color: green;
+}

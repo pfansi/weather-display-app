@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--Meta tag viewport allows to optimized the page view on smaller divices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Bootstrap library link imported to create the layout of the application  -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!--This is the link to the css file that styled the page -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- This is the link to the fontawesome library - a favicon will be imported to create search button-->
+    <script
+      src="https://kit.fontawesome.com/d3bce829f3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- a descriptive title for the project-->
+    <title>Weather Dashboard application</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <!-- bootstrap classes used to style the header-->
+      <header class="card">
+        <div class="card-body text-center text-white">
+          <h1>Weather Dashboard Application</h1>
+        </div>
+      </header>
+
+      <!-- bootstrap classes used to style the page content-->
+      <div class="container">
+        <div class="row">
+          <!-- this is the section that will append the list of sear city-->
+          <section class="col-md-auto">
+            <div class="card text">
+              <div class="card-body bg-light">
+                <h6 class="card-subtitle mb-2 text-muted">Search For A City</h6>
+
+                <div class="input-group mb-2">
+                  <input
+                    type="text"
+                    class="form-control searchInput"
+                    placeholder="Enter City Name"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="btn btn-outline-secondary bg-primary searchButton"
+                      type="button"
+                      id="button-addon2"
+                    >
+                      <!-- This is the search icon imported from fontawesome library-->
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <ul class="list-group"></ul>
+              </div>
+            </div>
+          </section>
+
+          <div class="col">
+            <!-- This is the section that will display the current weather -->
+            <div class="row">
+              <div class="card p-3 pl-5 pr-5 mb-2 mt-2">
+                <h5 class="card-title mt-2 text-center">Current Weather</h5>
+                <!-- The current weather forecast will append here-->
+                <div class="currentWeather"></div>
+              </div>
+            </div>
+
+            <!-- This is the section that will display the weather forecast -->
+            <div class="row">
+              <div class="card weatherForecast p-3 pl-5 pr-3">
+                <h5 class="card-title mt-2 mr-5">5 Days Forecast</h5>
+                <!-- The 5 day weather forecast will append here-->
+                <div class="col fivedayForecast"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Many of boostrap components require the use of JavaScript to function -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS and Jquery scripts -->
+    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  </body>
+</html>
