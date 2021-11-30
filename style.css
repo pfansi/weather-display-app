@@ -1,13 +1,3 @@
-ul {
-  list-style: none;
-}
-/* style for th elist items */
-li {
-  border-bottom: 1px solid lightgray;
-  text-align: left;
-  padding-left: 10px;
-}
-
 /* This styles for five day forecast cards */
 .fivedayStyle {
   padding: 20px;
@@ -24,6 +14,11 @@ li {
 
 header .card-body {
   background-color: #1c3544;
+}
+
+/* This style the list items */
+ul {
+  list-style: none;
 }
 
 li {
