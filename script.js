@@ -37,10 +37,7 @@ searchButton.click(function () {
 
             //This variable will append the list of searched city
             var cityEnter = $(".list-group").addClass("list-group-item");
-            cityEnter.append("<li>" + response.name + "</li>");
-            // // Local storage
-            // var local = localStorage.setItem(keyCount, response.name);
-            // keyCount = keyCount + 1;
+            cityEnter.append("<li>" + response.name + "</li>")
 
             // This create a div and append the current weather deta from the API
             var currentWeather = $(".currentWeather").append("<div>").addClass("card-body");
