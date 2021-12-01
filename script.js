@@ -3,21 +3,34 @@ var searchButton = $(".searchButton");
 
 var apiKey = "594c41602ce2f5ac3b3cdffd7564944d";
 
+const getFromLocalStorage = function(){
+    const localStorageData = JSON.parse(localStorage.getItem("cityHistory"));
 
-// we loop into the storage to check if there is any saved data 
-for (var i = 0; i < localStorage.length; i++) {
-
-    var saveCity = localStorage.getItem(i);
-    
-    var cityEnter = $(".list-group").addClass("list-group-item");
-
-    cityEnter.append("<li>" + saveCity + "</li>");
+    if (!localStorageData){
+        return [];
+    } else {
+        return localStorageData;
+    }
 }
 
-// when the search button is clicked , this function is called 
-searchButton.click(function () {
+const citiesFromLocalStorage = getFromLocalStorage();
+
+// we loop into the storage to check if there is any saved data 
+citiesFromLocalStorage.forEach(function(city){
+
+    var cityEnter = $(".list-group").addClass("list-group-item");
+
+    cityEnter.append("<li>" + city + "</li>");
+
+});
+
+const performSearch = function () {
 
     var searchInput = $(".searchInput").val();
+
+    citiesFromLocalStorage.push(searchInput);
+
+    localStorage.setItem("cityHistory",JSON.stringify(citiesFromLocalStorage));
 
     // let create variable for the current weather data 
     var urlWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
@@ -25,7 +38,7 @@ searchButton.click(function () {
     var urlForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
 
 
-    if (searchInput == "") {
+    if (searchInput ==="") {
         console.log(searchInput);
     } else {
         $.ajax({
@@ -99,5 +112,8 @@ searchButton.click(function () {
 
         });
     }
-}); 
+};
+
+// when the search button is clicked , this function is called 
+searchButton.click(performSearch); 
 
