@@ -14,8 +14,6 @@ for (var i = 0; i < localStorage.length; i++) {
     cityEnter.append("<li>" + saveCity + "</li>");
 }
 
-var keyCount = 0;
-
 // when the search button is clicked , this function is called 
 searchButton.click(function () {
 
