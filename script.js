@@ -19,7 +19,7 @@ searchButton.click(function () {
 
     var searchInput = $(".searchInput").val();
 
-    // let create variable for the API data 
+    // let create variable for the current weather data 
     var urlWeather = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
     // Variable for 5 day forecast working
     var urlForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + searchInput + "&Appid=" + apiKey + "&units=imperial";
