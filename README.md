@@ -30,7 +30,7 @@ I created a git repository folder that will host the finish website. The Reposit
 
 ## Screenshots
 
-- screenshot of the final application. ![screenshot](./images/weather_dashboard.jpg)
+- screenshot of the final application. ![screenshot](./images/weather_dashboard.JPG)
 
 ## Link to the deploy application
 
